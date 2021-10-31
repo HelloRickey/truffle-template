@@ -26,7 +26,7 @@ require("dotenv").config();
 var HDWalletProvider = require("@truffle/hdwallet-provider");
 var provider = new HDWalletProvider(
   process.env.PRIVATE_KEY,
-  "https://dev-evm.dev.findora.org:8545"
+  "https://prod-forge.prod.findora.org:8545/"
 );
 module.exports = {
   /**
@@ -42,7 +42,7 @@ module.exports = {
   networks: {
     testnet: {
       provider: provider,
-      network_id: 523,
+      network_id: 525,
     },
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
